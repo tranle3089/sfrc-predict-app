@@ -29,6 +29,7 @@ st.markdown("""
             margin-bottom: 0.5rem !important;
             border-left: 4px solid #2563eb;
             padding-left: 2.1rem;
+            color: #080707 !important;
             background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
         }
         label, .stNumberInput label, .stSelectbox label {
