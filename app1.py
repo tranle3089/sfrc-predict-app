@@ -67,7 +67,7 @@ st.markdown("""
         .stMarkdown p {
             font-size: 20px !important;
             margin-bottom: 0.1rem !important;
-            color: #23272f !important;
+            color: #68758f !important;
         }
     </style>
     """, unsafe_allow_html=True)
