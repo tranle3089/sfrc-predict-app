@@ -74,7 +74,7 @@ st.markdown("""
         /* ----------- Kết quả card đẹp ----------- */
         .result-card-row {
             display: flex;
-            gap: 2.2rem;
+            gap: 1.5rem;
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
             justify-content: center;
@@ -82,11 +82,12 @@ st.markdown("""
         .result-card {
             background: #fff;
             border-radius: 17px;
-            padding: 1.3rem 2.2rem 1.2rem 2.2rem;
-            box-shadow: 0 4px 18px 0 rgba(70, 109, 236, 0.08), 0 1.5px 2px 0 rgba(0,0,0,0.03);
-            min-width: 220px;
+            padding: 1.0rem 1.1rem 0.7rem 1.1rem;
+            box-shadow: 0 2px 10px 0 rgba(70, 109, 236, 0.06), 0 1px 2px 0 rgba(0,0,0,0.02);
+            min-width: 150px;
+            max-width: 180px;
             text-align: center;
-            border: 2.2px solid #3b82f6;
+            border: 1.5px solid #3b82f6;
             transition: box-shadow 0.2s, transform 0.2s;
         }
         .result-card:hover {
@@ -95,21 +96,21 @@ st.markdown("""
         }
         .result-label {
             color: #2563eb;
-            font-size: 1.15rem;
+            font-size: 1.0rem;
             font-weight: 800;
             margin-bottom: 1.0rem;
             letter-spacing: 0.5px;
         }
         .result-value {
             color: #18181b;
-            font-size: 2.4rem;
+            font-size: 2.0rem;
             font-weight: 900;
             margin-bottom: 0.2rem;
             letter-spacing: -2px;
         }
         .unit-label {
             color: #b3b5ba;
-            font-size: 1.04rem;
+            font-size: 1.0rem;
             margin-top: 0.4rem;
             font-weight: 600;
             letter-spacing: 1px;
@@ -117,7 +118,7 @@ st.markdown("""
         @media (max-width: 900px) {
             .result-card-row {
                 flex-direction: column;
-                gap: 1.1rem;
+                gap: 1.0rem;
             }
             .result-card {
                 min-width: unset;
