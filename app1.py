@@ -69,6 +69,50 @@ st.markdown("""
             margin-bottom: 0.1rem !important;
             color: #68758f !important;
         }
+        /* ----------- Kết quả card đẹp ----------- */
+        .result-card-row {
+            display: flex;
+            gap: 1.4rem;
+            margin-top: 1.3rem;
+            margin-bottom: 1.3rem;
+            justify-content: center;
+        }
+        .result-card {
+            background: #f5f8fe;
+            border-radius: 15px;
+            padding: 1.3rem 2.2rem 1.0rem 2.2rem;
+            box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.08);
+            min-width: 200px;
+            text-align: center;
+            border: 2.5px solid #2563eb;
+        }
+        .result-label {
+            color: #2563eb;
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .result-value {
+            color: #141820;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.1rem;
+            letter-spacing: -1px;
+        }
+        .unit-label {
+            color: #888;
+            font-size: 1rem;
+            margin-top: 0.3rem;
+        }
+        @media (max-width: 900px) {
+            .result-card-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .result-card {
+                min-width: unset;
+            }
+        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -121,6 +165,25 @@ if st.button("🔍 Predict All"):
     fc_pred = model_FC.predict(input_data)[0]
 
     st.success("✅ Prediction Results")
-    st.markdown(f"- **Compressive Strength (CS)**: `{cs_pred:.2f}` MPa")
-    st.markdown(f"- **Tensile Strength (ST)**: `{st_pred:.2f}` MPa")
-    st.markdown(f"- **Flexural Strength (FC)**: `{fc_pred:.2f}` MPa")
+    st.markdown(
+        f'''
+        <div class="result-card-row">
+            <div class="result-card">
+                <div class="result-label">Compressive Strength (CS)</div>
+                <div class="result-value">{cs_pred:.2f}</div>
+                <div class="unit-label">MPa</div>
+            </div>
+            <div class="result-card">
+                <div class="result-label">Tensile Strength (ST)</div>
+                <div class="result-value">{st_pred:.2f}</div>
+                <div class="unit-label">MPa</div>
+            </div>
+            <div class="result-card">
+                <div class="result-label">Flexural Strength (FC)</div>
+                <div class="result-value">{fc_pred:.2f}</div>
+                <div class="unit-label">MPa</div>
+            </div>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
