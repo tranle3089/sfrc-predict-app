@@ -64,9 +64,9 @@ st.markdown("""
 # Title and model loading
 st.title("SFRC Strength Prediction App")
 
-model_CS = joblib.load(r"C:\Users\SEJONG\OneDrive\01. Concrete\06. Data analysis\Python\Expand\CatBoost_optimized_CS.pkl")
-model_ST = joblib.load(r"C:\Users\SEJONG\OneDrive\01. Concrete\06. Data analysis\Python\Expand\CatBoost_optimized_ST.pkl")
-model_FC = joblib.load(r"C:\Users\SEJONG\OneDrive\01. Concrete\06. Data analysis\Python\Expand\CatBoost_optimized_FC.pkl")
+model_CS = joblib.load("CatBoost_optimized_CS.pkl")
+model_ST = joblib.load("CatBoost_optimized_ST.pkl")
+model_FC = joblib.load("CatBoost_optimized_FC.pkl")
 
 # Concrete matrix inputs
 st.markdown("---")
