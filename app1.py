@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # -------------------------------
-# ✅ Custom CSS for uniform font size
+# ✅ Custom CSS for uniform font size & đẹp UI
 # -------------------------------
 st.markdown("""
     <style>
@@ -12,7 +12,7 @@ st.markdown("""
             padding-bottom: 0.1rem !important;
             padding-left: 1.5rem !important;
             padding-right: 1.5rem !important;
-        } 
+        }
         html, body, [class*="css"]  {
             font-size: 20px !important;
         }
@@ -36,7 +36,6 @@ st.markdown("""
             font-weight: 500;
             margin-bottom: 0.1rem !important;
         }
-        /* Giảm khoảng cách giữa các input */
         .stNumberInput, .stSelectbox {
             margin-bottom: 0.1rem !important;
         }
@@ -61,7 +60,6 @@ st.markdown("""
         }
     </style>
     """, unsafe_allow_html=True)
-
 
 # Title and model loading
 st.title("SFRC Strength Prediction App")
@@ -101,6 +99,7 @@ with col5:
             0.5: "Smooth / Mill-cut"
         }.get(x)
     )
+
 # Prediction
 st.markdown("---")
 input_data = np.array([[W, C, S, CA, smax, SP, pf, Vf, df, Lf]])
