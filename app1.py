@@ -8,19 +8,22 @@ import joblib
 st.markdown("""
     <style>
         .block-container {
-            padding-top: 1.2rem !important;
-            padding-bottom: 0.1rem !important;
-            padding-left: 1.5rem !important;
-            padding-right: 1.5rem !important;
+            padding-top: 2.2rem !important;
+            padding-bottom: 1.0rem !important;
+            padding-left: 2.2rem !important;
+            padding-right: 2.2rem !important;
+            background: #f5f7fa;
         }
         html, body, [class*="css"]  {
             font-size: 20px !important;
+            color: #191a23 !important;
         }
         h1 {
             font-size: 34px !important;
             font-weight: 800 !important;
             margin-top: 0.0rem !important;
-            margin-bottom: 0.0rem !important;
+            margin-bottom: 0.5rem !important;
+            color: #22223b !important;
         }
         h2, h3, h4 {
             font-size: 24px !important;
@@ -28,36 +31,43 @@ st.markdown("""
             margin-top: 0 !important;
             margin-bottom: 0.5rem !important;
             border-left: 4px solid #2563eb;
-            padding-left: 2.1rem;
-            color: #080707 !important;
-            background: linear-gradient(90deg, #eff6ff 50%, transparent 80%);
+            padding-left: 1.1rem;
+            color: #171821 !important;
+            background: linear-gradient(90deg, #e9efff 50%, transparent 100%);
         }
         label, .stNumberInput label, .stSelectbox label {
             font-size: 20px !important;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 0.1rem !important;
+            color: #2c2d35 !important;
         }
         .stNumberInput, .stSelectbox {
-            margin-bottom: 0.1rem !important;
+            margin-bottom: 0.4rem !important;
+            background: #fff !important;
+            border-radius: 11px !important;
+            border: 1px solid #e5e7eb !important;
+            box-shadow: 0 2px 12px 0 rgba(31,38,135,0.06);
         }
         .stButton>button {
             font-size: 22px !important;
             color: #fff !important;
-            background: #021e5c !important;
+            background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
             border: none !important;
-            border-radius: 6px !important;
-            padding: 0.5rem 1.0rem !important;
+            border-radius: 7px !important;
+            padding: 0.6rem 2.1rem !important;
             font-weight: 800 !important;
-            transition: background 0.3s;
-            margin-top: 0.2rem !important;
-            margin-bottom: 0.2rem !important;
+            transition: background 0.2s;
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+            box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.07);
         }
         .stButton>button:hover {
-            background: #1d4ed8 !important;
+            background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
         }
         .stMarkdown p {
             font-size: 20px !important;
             margin-bottom: 0.1rem !important;
+            color: #23272f !important;
         }
     </style>
     """, unsafe_allow_html=True)
