@@ -56,13 +56,15 @@ st.markdown("""
             border-radius: 7px !important;
             padding: 0.6rem 2.1rem !important;
             font-weight: 800 !important;
-            transition: background 0.2s;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
             margin-top: 0.5rem !important;
             margin-bottom: 0.5rem !important;
             box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.07);
         }
         .stButton>button:hover {
             background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+            box-shadow: 0 6px 24px 0 rgba(70,109,236,0.16);
+            transform: translateY(-2px) scale(1.04);
         }
         .stMarkdown p {
             font-size: 20px !important;
@@ -72,42 +74,50 @@ st.markdown("""
         /* ----------- Kết quả card đẹp ----------- */
         .result-card-row {
             display: flex;
-            gap: 1.4rem;
-            margin-top: 1.3rem;
-            margin-bottom: 1.3rem;
+            gap: 2.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
             justify-content: center;
         }
         .result-card {
-            background: #f5f8fe;
-            border-radius: 15px;
-            padding: 1.3rem 2.2rem 1.0rem 2.2rem;
-            box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.08);
-            min-width: 200px;
+            background: #fff;
+            border-radius: 17px;
+            padding: 1.3rem 2.2rem 1.2rem 2.2rem;
+            box-shadow: 0 4px 18px 0 rgba(70, 109, 236, 0.08), 0 1.5px 2px 0 rgba(0,0,0,0.03);
+            min-width: 220px;
             text-align: center;
-            border: 2.5px solid #2563eb;
+            border: 2.2px solid #3b82f6;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .result-card:hover {
+            box-shadow: 0 6px 30px 0 rgba(70,109,236,0.13);
+            transform: translateY(-2px) scale(1.04);
         }
         .result-label {
             color: #2563eb;
-            font-size: 1.08rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 1.0rem;
+            letter-spacing: 0.5px;
         }
         .result-value {
-            color: #141820;
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.1rem;
-            letter-spacing: -1px;
+            color: #18181b;
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-bottom: 0.2rem;
+            letter-spacing: -2px;
         }
         .unit-label {
-            color: #888;
-            font-size: 1rem;
-            margin-top: 0.3rem;
+            color: #b3b5ba;
+            font-size: 1.04rem;
+            margin-top: 0.4rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         @media (max-width: 900px) {
             .result-card-row {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.1rem;
             }
             .result-card {
                 min-width: unset;
