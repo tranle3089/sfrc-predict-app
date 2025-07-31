@@ -175,7 +175,11 @@ if st.button("🔍 Predict All"):
     st_pred = model_ST.predict(input_data)[0]
     fc_pred = model_FC.predict(input_data)[0]
 
-    st.success("✅ Prediction Results")
+    st.markdown("""
+    <div style="background-color:#e6f9eb; border-radius: 13px; padding: 1.0rem 1.5rem; margin-bottom:1rem; color:#20723a; font-weight: 700; font-size: 1.1rem; border: 1.5px solid #74c99e;">
+        ✅ Prediction Results
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown(
         f'''
         <div class="result-card-row">
